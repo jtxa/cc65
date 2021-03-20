@@ -44,6 +44,7 @@
 #include "check.h"
 #include "fname.h"
 #include "print.h"
+#include "reproducible.h"
 #include "version.h"
 #include "xmalloc.h"
 
@@ -1381,7 +1382,7 @@ void O65WriteTarget (O65Desc* D, File* F)
     /* Define some more options: A timestamp, the linker version and the
     ** filename
     */
-    T = time (0);
+    T = ReproducibleTime (time (0));
     strcpy (OptBuf, ctime (&T));
     OptLen = strlen (OptBuf);
     while (OptLen > 0 && IsControl (OptBuf[OptLen-1])) {

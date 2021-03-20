@@ -41,6 +41,7 @@
 #include "check.h"
 #include "coll.h"
 #include "hashtab.h"
+#include "reproducible.h"
 #include "xmalloc.h"
 
 /* ca65 */
@@ -252,7 +253,7 @@ void WriteFiles (void)
         const FileEntry* F = CollConstAt (&FileTab, I);
         /* Write the fields */
         ObjWriteVar (F->Name);
-        ObjWrite32 (F->MTime);
+        ObjWrite32 (ReproducibleTime (F->MTime));
         ObjWriteVar (F->Size);
     }
 

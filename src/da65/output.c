@@ -42,6 +42,7 @@
 /* common */
 #include "addrsize.h"
 #include "cpu.h"
+#include "reproducible.h"
 #include "version.h"
 
 /* da65 */
@@ -76,7 +77,7 @@ static const char* SegmentName = 0;     /* Name of current segment */
 static void PageHeader (void)
 /* Print a page header */
 {
-    const time_t T = time (0);
+    const time_t T = ReproducibleTime (time (0));
     char Now[128];
 
     strftime (Now, sizeof (Now), "%Y-%m-%d %H:%M:%S", localtime (&T));

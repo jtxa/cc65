@@ -931,6 +931,9 @@ The compiler defines several macros at startup:
   This macro expands to the date of translation of the preprocessing
   translation unit in the form "Mmm dd yyyy".
 
+  If the environment variable <tt>SOURCE_DATE_EPOCH</tt> is set, its value is
+  used instead of the the translation time.
+
   <tag><tt>__EAGERLY_INLINE_FUNCS__</tt></tag>
 
   Is defined if the compiler was called with the <tt><ref id="option-eagerly-inline-funcs"
@@ -1020,6 +1023,9 @@ The compiler defines several macros at startup:
 
   This macro expands to the time of translation of the preprocessing
   translation unit in the form "hh:mm:ss".
+
+  If the environment variable <tt>SOURCE_DATE_EPOCH</tt> is set, its value is
+  used instead of the the translation time.
 
   <tag><tt>__VIC20__</tt></tag>
 

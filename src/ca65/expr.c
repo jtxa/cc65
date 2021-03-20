@@ -41,6 +41,7 @@
 #include "cpu.h"
 #include "exprdefs.h"
 #include "print.h"
+#include "reproducible.h"
 #include "shift.h"
 #include "segdefs.h"
 #include "strbuf.h"
@@ -1191,7 +1192,7 @@ static ExprNode* Factor (void)
             break;
 
         case TOK_TIME:
-            N = GenLiteralExpr ((long) time (0));
+            N = GenLiteralExpr ((long) ReproducibleTime (time (0)));
             NextTok ();
             break;
 

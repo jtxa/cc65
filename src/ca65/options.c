@@ -37,6 +37,7 @@
 
 /* common */
 #include "optdefs.h"
+#include "reproducible.h"
 #include "xmalloc.h"
 
 /* ca65 */
@@ -147,7 +148,7 @@ void OptOS (const StrBuf* OS)
 void OptDateTime (unsigned long DateTime)
 /* Add a date/time option */
 {
-    NewOption (OPT_DATETIME, DateTime);
+    NewOption (OPT_DATETIME, ReproducibleTime (DateTime));
 }
 
 

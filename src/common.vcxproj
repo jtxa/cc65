@@ -48,6 +48,7 @@
     <ClInclude Include="common\objdefs.h" />
     <ClInclude Include="common\optdefs.h" />
     <ClInclude Include="common\print.h" />
+    <ClInclude Include="common\reproducible.h" />
     <ClInclude Include="common\scopedefs.h" />
     <ClInclude Include="common\searchpath.h" />
     <ClInclude Include="common\segdefs.h" />
@@ -93,6 +94,7 @@
     <ClCompile Include="common\matchpat.c" />
     <ClCompile Include="common\mmodel.c" />
     <ClCompile Include="common\print.c" />
+    <ClCompile Include="common\reproducible.c" />
     <ClCompile Include="common\searchpath.c" />
     <ClCompile Include="common\segnames.c" />
     <ClCompile Include="common\shift.c" />

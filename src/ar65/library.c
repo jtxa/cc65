@@ -48,6 +48,7 @@
 #include "exprdefs.h"
 #include "libdefs.h"
 #include "print.h"
+#include "reproducible.h"
 #include "symdefs.h"
 #include "xmalloc.h"
 
@@ -185,7 +186,7 @@ static void WriteIndexEntry (const ObjData* O)
     /* Module name/flags/MTime/start/size */
     WriteStr (NewLib, O->Name);
     Write16  (NewLib, O->Flags & ~OBJ_HAVEDATA);
-    Write32  (NewLib, O->MTime);
+    Write32  (NewLib, ReproducibleTime (O->MTime));
     Write32  (NewLib, O->Start);
     Write32  (NewLib, O->Size);
 }
