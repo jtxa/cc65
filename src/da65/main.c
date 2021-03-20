@@ -557,7 +557,6 @@ int main (int argc, char* argv [])
     };
 
     unsigned I;
-    time_t T;
 
     /* Initialize the cmdline module */
     InitCmdLine (&argc, &argv, "da65");
@@ -655,12 +654,6 @@ int main (int argc, char* argv [])
     if (CPU == CPU_UNKNOWN) {
         CPU = CPU_6502;
     }
-
-    /* Get the current time and convert it to string so it can be used in
-    ** the output page headers.
-    */
-    T = time (0);
-    strftime (Now, sizeof (Now), "%Y-%m-%d %H:%M:%S", localtime (&T));
 
     /* Load the input file */
     LoadCode ();

@@ -66,7 +66,6 @@ extern long             InputSize;      /* Number of bytes to read from input */
 
 /* Stuff needed by many routines */
 extern unsigned         Pass;           /* Disassembler pass */
-extern char             Now[128];       /* Current time as string */
 
 /* Comments */
 #define MIN_COMMENTS    0

@@ -76,6 +76,11 @@ static const char* SegmentName = 0;     /* Name of current segment */
 static void PageHeader (void)
 /* Print a page header */
 {
+    const time_t T = time (0);
+    char Now[128];
+
+    strftime (Now, sizeof (Now), "%Y-%m-%d %H:%M:%S", localtime (&T));
+
     fprintf (F,
              "; da65 V%s\n"
              "; Created:    %s\n"
